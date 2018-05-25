@@ -34,7 +34,7 @@ spec:
           args:
             - server
             - --namespace
-            - {{ .Values.heptioArk }}
+            - {{ .Values.arkNamespace }}
             - --log-level
             - {{ .Values.logLevel }}
           volumeMounts:
