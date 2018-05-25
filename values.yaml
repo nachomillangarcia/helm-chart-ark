@@ -1,0 +1,4 @@
+s3Bucket: my-s3-ark-bucket
+AWS_AK: ACCESSKEY
+AWS_SK: SECRETKEY
+arkNamespace: heptio-ark

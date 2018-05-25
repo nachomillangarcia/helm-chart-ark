@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ark-server-config
+  namespace: heptio-ark
+data:
+{{ (tpl (.Files.Glob "configuration/*").AsConfig .) | indent 2 }}

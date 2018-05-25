@@ -1,0 +1,18 @@
+apiVersion: ark.heptio.com/v1
+kind: Config
+metadata:
+  namespace: heptio-ark
+  name: default
+persistentVolumeProvider:
+  name: aws
+  config:
+    region: eu-west-1
+backupStorageProvider:
+  name: aws
+  bucket: {{ .Values.s3Bucket }}
+  config:
+    region: eu-west-1
+backupSyncPeriod: 30m
+gcSyncPeriod: 30m
+scheduleSyncPeriod: 1m
+restoreOnlyMode: false
