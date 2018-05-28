@@ -11,11 +11,6 @@ helm install --name my-heptio-ark .
 
 The following table lists the configurable parameters of the heptio-ark chart and their default values.
 
-s3Bucket: my-s3-ark-bucket
-AWS_AK: ACCESSKEY
-AWS_SK: SECRETKEY
-arkNamespace: heptio-ark
-
 | Parameter | Description | Rquired | Default |
 | --------- | ----------- | ------- | ------- |
 | `s3Bucket` | S3 Bucket name | yes | |
