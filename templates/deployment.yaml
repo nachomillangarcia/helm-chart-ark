@@ -28,7 +28,7 @@ spec:
       serviceAccountName: ark-server
       containers:
         - name: ark
-          image: gcr.io/heptio-images/ark:v0.7.1
+          image: gcr.io/heptio-images/ark:v0.8.1
           command:
             - /ark
           args:

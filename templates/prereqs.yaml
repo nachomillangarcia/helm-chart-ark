@@ -91,13 +91,8 @@ spec:
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: heptio-ark
+  name: {{ .Values.arkNamespace }}
 
----
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: heptio-ark-server
 
 ---
 apiVersion: v1
@@ -128,7 +123,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: ark
-  namespace: heptio-ark
+  namespace: {{ .Values.arkNamespace }}
   labels:
     component: ark
 
@@ -141,7 +136,7 @@ metadata:
     component: ark
 subjects:
   - kind: ServiceAccount
-    namespace: heptio-ark
+    namespace: {{ .Values.arkNamespace }}
     name: ark
 roleRef:
   kind: ClusterRole
