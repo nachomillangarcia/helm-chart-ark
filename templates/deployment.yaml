@@ -35,8 +35,10 @@ spec:
             - server
             - --namespace
             - {{ .Values.arkNamespace }}
+            {{- if .Values.logLevel }}
             - --log-level
             - {{ .Values.logLevel }}
+            {{- end }}
           volumeMounts:
             - name: cloud-credentials
               mountPath: /credentials
