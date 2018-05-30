@@ -16,7 +16,8 @@ The following table lists the configurable parameters of the heptio-ark chart an
 | `s3Bucket` | S3 Bucket name | yes | |
 | `AWS_AK` | AWS Access Key | yes | |
 | `AWS_SK` | AWS Secret Key | yes | |
-| `arkNamespace` | Namespace to store backups | yes | heptio-ark |
+| `arkNamespace` | Namespace to store backups | yes | `heptio-ark` |
+| `logLevel` | log-level parameter for server | no | `` |
 
 ## Other Charts
 This chart is based in [this PR](https://github.com/kubernetes/charts/pull/3795) in the official charts repository (open at the moment).

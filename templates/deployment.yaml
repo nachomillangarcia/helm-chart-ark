@@ -25,7 +25,7 @@ spec:
         component: ark
     spec:
       restartPolicy: Always
-      serviceAccountName: ark-server
+      serviceAccountName: ark
       containers:
         - name: ark
           image: gcr.io/heptio-images/ark:v0.8.1
