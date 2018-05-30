@@ -15,9 +15,9 @@ spec:
       restartPolicy: Never
       containers:
         - name: deploy-ark-config
-          image: claranet/gcloud-kubectl-docker
+          image: lachlanevenson/k8s-kubectl
           imagePullPolicy: Always
-          command: ["kubectl","create","-f","/tmp/"]
+          args: ["create","-f","/tmp/"]
           volumeMounts:
             - name: ark-server-config
               mountPath: /tmp
